@@ -1,5 +1,28 @@
-.vivy-starter {
-  p {
-    color: blueviolet;
-  }
-}
+// Set your brand colors
+$off-white: #f6f6f6;
+$ils-grey: #eeeeee;
+$orange: #ffaf81;
+$light-orange: lighten($orange, 5%);
+$dark-orange: darken($orange, 10%);
+
+// Update Bulma's global variables
+$family-sans-serif: "Avenir", "Helvetica Neue", "Lato", "Segoe UI", Helvetica,
+  Arial, sans-serif;
+$family-primary: $family-sans-serif;
+$primary: $orange;
+$primary-light: $light-orange;
+$link: $light-orange;
+$black: #333333;
+
+$button-color: $orange;
+// font-weight
+$text-weight-boldest: 900;
+
+// animations - https://easings.net/
+$animation-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+$animation-bouncy: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/grid/columns.sass";
+@import "../node_modules/bulma/sass/elements/table.sass";

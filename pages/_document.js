@@ -10,7 +10,6 @@ export default class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
-          <link rel="stylesheet" href="/_next/static/style.css" />
           <meta
             name="viewport"
             content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"
