@@ -11,6 +11,12 @@ app
 
     server.get('*', (req, res) => handle(req, res));
 
+    server.get('/blog/:slug', (req, res) => {
+      const nextJsPage = '/blogPost';
+      const queryParams = { slug: req.params.slug };
+      app.render(req, res, nextJsPage, queryParams);
+    });
+
     server.listen(3000, err => {
       if (err) throw err;
       console.log('> Ready http://localhost:3000 <');
