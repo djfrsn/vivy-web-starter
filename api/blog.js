@@ -35,4 +35,5 @@ const getBlogPostAPI = async slug => {
     return error;
   }
 };
+
 export { getBlogPostsAPI, getBlogPostAPI };
