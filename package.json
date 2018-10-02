@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "now-build": "echo 'Built on Travis CI'",
-    "dev": "next",
-    "start": "next start",
+    "dev": "node server.js",
+    "start": "NODE_ENV=production node server.js",
     "build": "next build && npm run export",
     "export": "next export",
     "deploy": "npm run build && firebase deploy"
@@ -17,6 +17,7 @@
     "axios": "^0.18.0",
     "bulma": "^0.7.1",
     "classnames": "^2.2.6",
+    "express": "^4.16.3",
     "firebase": "^5.5.0",
     "graphql": "^14.0.2",
     "isomorphic-unfetch": "^3.0.0",
