@@ -1,21 +1,20 @@
 import App from '../components/App';
 import { getPageAPI } from '../api/page';
+import { getPageContent } from '../helpers/prismic';
 
 import Home from '../components/vivy-kit/Home';
 import '../components/index.scss';
 
-const Index = ({ content = [] }) => (
+const Index = props => (
   <App title="Vivy">
-    <Home content={content[0]} />
+    <Home {...props} />
   </App>
 );
 
 Index.getInitialProps = async () => {
-  // Here we call the API and request 5 documents
   const response = await getPageAPI({ content_type: 'home_page' });
-  return {
-    content: response.results
-  };
+
+  return getPageContent(response);
 };
 
 export default Index;

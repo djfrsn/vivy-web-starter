@@ -15,7 +15,7 @@ const getPageAPI = async ({ content_type }) => {
         // such as how many documents to return
       }
     );
-    return response;
+    return response.results[0].data;
   } catch (error) {
     return error;
   }
