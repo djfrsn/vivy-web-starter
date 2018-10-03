@@ -2,12 +2,11 @@
   "name": "vivy",
   "version": "0.0.1",
   "scripts": {
-    "now-build": "echo 'Built on Travis CI'",
     "dev": "node server.js",
     "start": "NODE_ENV=production node server.js",
-    "build": "next build && npm run export",
+    "build": "next build",
     "export": "next export",
-    "deploy": "npm run build && firebase deploy"
+    "deploy": "now --public"
   },
   "dependencies": {
     "@svgr/cli": "^2.3.0",
