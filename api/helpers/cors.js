@@ -1,4 +1,4 @@
-var whitelist = ['http://example1.com', 'https://example2.com'];
+var whitelist = [process.env.PRODUCTION_URL];
 var corsOptions = {
   origin: function(origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
